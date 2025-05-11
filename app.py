@@ -46,7 +46,6 @@ def recognize_speech_from_mic(recognizer, microphone):
         
     return response
 
-
 def text_to_speech(text):
     try:
         engine = pyttsx3.init()
@@ -70,13 +69,9 @@ def ask_jarvis(user_message, history):
     except Exception as e:
         return f"An error occurred: {str(e)}"
 
-
-
 conversation_history = [
     {"role": "system", "content": "You are Jarvis, a polite and efficient AI assistant. Respond in a short, crisp, and respectful manner. Avoid unnecessary details and focus only on what is essential to answer the user's question or request."}
 ]
-
-
 
 recognizer = sr.Recognizer()
 try:
